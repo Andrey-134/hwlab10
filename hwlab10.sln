@@ -1,0 +1,25 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio Version 17
+VisualStudioVersion = 17.14.36414.22 d17.14
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "hwlab10", "hwlab10\hwlab10.csproj", "{39A9DC78-7954-4978-8721-A940C00AED2B}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{39A9DC78-7954-4978-8721-A940C00AED2B}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{39A9DC78-7954-4978-8721-A940C00AED2B}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{39A9DC78-7954-4978-8721-A940C00AED2B}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{39A9DC78-7954-4978-8721-A940C00AED2B}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {F7AB331B-B483-4643-8284-0F6D813CF05B}
+	EndGlobalSection
+EndGlobal
