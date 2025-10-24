@@ -176,6 +176,37 @@ class Program
 
         int result = await GetDataAsync();
         Console.WriteLine($"Данные получены! Результат: {result}");
+        // задание 6
+        Console.WriteLine("\n=== ЗАДАНИЕ 6 - МИНИ-ПРОЕКТ 'УНИВЕРСИТЕТ' ===");
+        var studentsList = await LoadStudentsAsync();
+
+        var teachers = new List<Teacher>
+        {
+            new Teacher("Петров И.С.", "Информатики", "Программирование"),
+            new Teacher("Сидорова М.И.", "Математики", "Высшая математика"),
+            new Teacher("Козлов А.В.", "Информатики", "Базы данных")
+        };
+        List<IPerson> people = new List<IPerson>();
+        people.AddRange(studentsList);
+        people.AddRange(teachers);
+
+        var studentsOver20 = studentsList.Where(s => s.Age > 20);
+        Console.WriteLine("\nСтуденты старше 20 лет:");
+        foreach (var studentItem in studentsOver20)
+        {
+            Console.WriteLine($"  {studentItem.GetDescription()}");
+        }
+        var teachersFromIT = teachers.Where(t => t.Department == "Информатики");
+        Console.WriteLine("\nПреподаватели кафедры Информатики:");
+        foreach (var teacher in teachersFromIT)
+        {
+            Console.WriteLine($"  {teacher.GetDescription()}");
+        }
+        var sortedPeople = people.OrderBy(p => p.GetDescription().Split(':')[1].Trim().Split(' ')[0]);
+        Console.WriteLine("\nВсе люди (отсортировано по имени):");
+        foreach (var person in sortedPeople)
+        {
+            Console.WriteLine($"  {person.GetDescription()}");
+        }
     }
 }
-
