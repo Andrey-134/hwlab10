@@ -144,5 +144,20 @@ class Program
 
         List<int> multiplesOf3 = numbers.FindAll(n => n % 3 == 0);
         Console.WriteLine("Числа, кратные 3: " + string.Join(", ", multiplesOf3));
+        // задание 3
+        Console.WriteLine("\n=== ЗАДАНИЕ 3 - ИНТЕРФЕЙСЫ ===");
+        List<IPrintable> printables = new List<IPrintable>
+        {
+            new Book("Война и мир", "Л. Толстой"),
+            new Magazine("Наука и жизнь", 5),
+            new Book("Преступление и наказание", "Ф. Достоевский"),
+            new Magazine("Техника молодёжи", 12)
+        };
+
+        foreach (var item in printables)
+        {
+            item.PrintInfo();
+        }
     }
 }
+
