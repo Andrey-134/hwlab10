@@ -132,6 +132,6 @@ class Program
             Console.WriteLine($"│ {s.Name,-11} │ {s.Age,-6} │ {s.Group,-7} │");
         }
 
-        Console.WriteLine("");
+        Console.WriteLine(""); 
     }
 }
