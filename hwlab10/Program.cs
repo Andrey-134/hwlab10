@@ -132,6 +132,17 @@ class Program
             Console.WriteLine($"│ {s.Name,-11} │ {s.Age,-6} │ {s.Group,-7} │");
         }
 
-        Console.WriteLine(""); 
+        Console.WriteLine("");
+        // задание 2 
+        Console.WriteLine("\n=== ЗАДАНИЕ 2 - ЛЯМБДА-ВЫРАЖЕНИЯ ===");
+
+        List<int> numbers = Enumerable.Range(1, 20).ToList();
+        Console.WriteLine("Исходный список: " + string.Join(", ", numbers));
+
+        List<int> evenNumbers = numbers.FindAll(n => n % 2 == 0);
+        Console.WriteLine("Чётные числа: " + string.Join(", ", evenNumbers));
+
+        List<int> multiplesOf3 = numbers.FindAll(n => n % 3 == 0);
+        Console.WriteLine("Числа, кратные 3: " + string.Join(", ", multiplesOf3));
     }
 }
