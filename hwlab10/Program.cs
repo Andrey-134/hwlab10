@@ -158,6 +158,18 @@ class Program
         {
             item.PrintInfo();
         }
+        // задание 4 
+        Console.WriteLine("\n=== ЗАДАНИЕ 4 - LINQ-ЗАПРОСЫ ===");
+
+        string[] cities = { "Москва", "Санкт-Петербург", "Казань", "Краснодар", "Новосибирск", "Калининград", "Владивосток" };
+
+        var citiesStartingWithK = cities.Where(c => c.StartsWith("К"));
+        Console.WriteLine("Города на 'К': " + string.Join(", ", citiesStartingWithK));
+        var sortedByLength = cities.OrderBy(c => c.Length);
+        Console.WriteLine("Города по длине: " + string.Join(", ", sortedByLength));
+
+        var longCities = cities.Where(c => c.Length > 6);
+        Console.WriteLine("Города длиннее 6 символов: " + string.Join(", ", longCities));
     }
 }
 
