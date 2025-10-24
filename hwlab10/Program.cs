@@ -170,6 +170,12 @@ class Program
 
         var longCities = cities.Where(c => c.Length > 6);
         Console.WriteLine("Города длиннее 6 символов: " + string.Join(", ", longCities));
+        // задание 5 
+        Console.WriteLine("\n=== ЗАДАНИЕ 5 - АСИНХРОННОЕ ПРОГРАММИРОВАНИЕ ===");
+        Console.WriteLine("Ждём данные…");
+
+        int result = await GetDataAsync();
+        Console.WriteLine($"Данные получены! Результат: {result}");
     }
 }
 
